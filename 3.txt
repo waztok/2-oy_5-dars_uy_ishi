@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int a[4][4] = {
+        {5, 12, 15, 3},
+        {20, 7, 10, 9},
+        {25, 4, 11, 30},
+        {8, 35, 2, 14}
+    };
+    int sanoq = 0;
+
+    printf("5 ga bolinadigan sonlar: ");
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (a[i][j] % 5 == 0) {
+                printf("%d ", a[i][j]);
+                sanoq++;
+            }
+        }
+    }
+    printf("\nJami: %d ta\n", sanoq);
+
+    return 0;
+}

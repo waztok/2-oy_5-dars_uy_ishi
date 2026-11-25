@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int a[3][3] = {
+        {2, 5, 1},
+        {8, 9, 4},
+        {3, 2, 6}
+    };
+
+    int eng_katta_yigindi = 0;
+    int eng_katta_qator = 0;
+
+    for (int i = 0; i < 3; i++) {
+        int yigindi = 0;
+        for (int j = 0; j < 3; j++) {
+            yigindi += a[i][j];
+        }
+        printf("%d-qator yigindisi: %d\n", i + 1, yigindi);
+
+        if (i == 0 || yigindi > eng_katta_yigindi) {
+            eng_katta_yigindi = yigindi;
+            eng_katta_qator = i + 1;
+        }
+    }
+
+    printf("Eng katta yigindi %d-qatorda: %d\n", eng_katta_qator, eng_katta_yigindi);
+
+    return 0;
+}

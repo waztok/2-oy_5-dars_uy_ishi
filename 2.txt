@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a[4][3] = {
+        {5, 8, 2},
+        {3, 1, 9},
+        {7, 4, 6},
+        {2, 10, 1}
+    };
+
+    for (int j = 0; j < 3; j++) {
+        int min = a[0][j];
+        for (int i = 1; i < 4; i++) {
+            if (a[i][j] < min) {
+                min = a[i][j];
+            }
+        }
+        printf("%d-ustun eng kichigi: %d\n", j + 1, min);
+    }
+
+    return 0;
+}

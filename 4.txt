@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int a[3][4] = {
+        {2, -5, 7, 0},
+        {-1, -3, 4, 9},
+        {5, 1, -2, 6}
+    };
+
+    for (int i = 0; i < 3; i++) {
+        int musbat = 0;
+        for (int j = 0; j < 4; j++) {
+            if (a[i][j] > 0) {
+                musbat++;
+            }
+        }
+        printf("%d-qatorda musbat sonlar: %d ta\n", i + 1, musbat);
+    }
+
+    return 0;
+}

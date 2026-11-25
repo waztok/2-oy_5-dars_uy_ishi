@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int a[4][4] = {
+        {3, 7, 3, 2},
+        {5, 3, 8, 1},
+        {9, 4, 3, 6},
+        {2, 7, 3, 5}
+    };
+    int son, sanoq = 0;
+
+    printf("Son kiriting: ");
+    scanf("%d", &son);
+
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (a[i][j] == son) {
+                sanoq++;
+            }
+        }
+    }
+
+    printf("%d soni massivda %d marta uchradi.\n", son, sanoq);
+
+    return 0;
+}
